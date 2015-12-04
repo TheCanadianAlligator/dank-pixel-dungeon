@@ -73,7 +73,7 @@ public class ScrollOfRage extends Scroll {
 	@Override
 	public String desc() {
 		return
-			"When read aloud, this scroll will unleash a great roar " +
-			"that draws all enemies to the reader, and enrages nearby ones.";
+			"Nothing enrages Regrowth spammers like a shitpost about their precious wand. " +
+			"Fortunately for you, there's a reason the monsters don't eat rations";
 	}
 }
