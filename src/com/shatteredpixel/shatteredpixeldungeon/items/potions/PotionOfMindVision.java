@@ -40,9 +40,9 @@ public class PotionOfMindVision extends Potion {
 		Dungeon.observe();
 		
 		if (Dungeon.level.mobs.size() > 0) {
-			GLog.i( "You can somehow feel the presence of other creatures' minds!" );
+			GLog.i( "You turn on your wall hacks!" );
 		} else {
-			GLog.i( "You can somehow tell that you are alone on this level at the moment." );
+			GLog.i( "Filthy scrubs get on my level" );
 		}
 	}
 	
