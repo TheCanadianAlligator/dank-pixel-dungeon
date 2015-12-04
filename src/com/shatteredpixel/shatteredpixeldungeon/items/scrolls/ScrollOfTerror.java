@@ -60,13 +60,13 @@ public class ScrollOfTerror extends Scroll {
 		
 		switch (count) {
 		case 0:
-			GLog.i( "The scroll shitposts about Regrowth!" );
+			GLog.i( "The scroll emits a brilliant flash of red light!" );
 			break;
 		case 1:
-			GLog.i( "The scroll shitposts about Regrowth and the " + affected.name + " flees!" );
+			GLog.i( "The scroll emits a brilliant flash of red light and the " + affected.name + " flees!" );
 			break;
 		default:
-			GLog.i( "The scroll shitposts about Regrowth and the monsters flee!" );
+			GLog.i( "The scroll emits a brilliant flash of red light and the monsters flee!" );
 		}
 		setKnown();
 		
@@ -76,8 +76,8 @@ public class ScrollOfTerror extends Scroll {
 	@Override
 	public String desc() {
 		return
-			"Nothing scares Regrowth spammers like a good shitpost about their precious wand. " +
-			"Fortunately for you, there's a reason the monsters don't eat rations.";
+			"A flash of red light will overwhelm all creatures in your field of view with terror, " +
+-			"and they will turn and flee. Attacking a fleeing enemy will dispel the effect.";
 	}
 	
 	@Override
