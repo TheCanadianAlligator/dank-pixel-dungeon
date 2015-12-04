@@ -41,16 +41,16 @@ import java.util.ArrayList;
 
 public class TimekeepersHourglass extends Artifact {
 
-	private static final String TXT_HGLASS	= "Timekeeper's Hourglass";
+	private static final String TXT_HGLASS	= "Timekeeper's 'Hourglass'";
 	private static final String TXT_STASIS	= "Put myself in stasis";
 	private static final String TXT_FREEZE	= "Freeze time around me";
 	private static final String TXT_DESC 	=
-			"How would you like to use the hourglass's magic?\n\n" +
+			"How would you like to use the IED's magic?\n\n" +
 			"While in stasis, time will move normally while you are frozen and completely invulnerable.\n\n" +
 			"When time is frozen, you can move as if your actions take no time. Note that attacking will break this.";
 
 	{
-		name = "Timekeeper's Hourglass";
+		name = "Timekeeper's 'Hourglass'";
 		image = ItemSpriteSheet.ARTIFACT_HOURGLASS;
 
 		level = 0;
@@ -80,10 +80,10 @@ public class TimekeepersHourglass extends Artifact {
 	public void execute( Hero hero, String action ) {
 		if (action.equals(AC_ACTIVATE)){
 
-			if (!isEquipped( hero ))        GLog.i("You need to equip your hourglass to do that.");
-			else if (activeBuff != null)    GLog.i("Your hourglass is already in use.");
-			else if (charge <= 1)           GLog.i("Your hourglass hasn't recharged enough to be usable yet.");
-			else if (cursed)                GLog.i("You cannot use a cursed hourglass.");
+			if (!isEquipped( hero ))        GLog.i("You need to equip your IED to do that.");
+			else if (activeBuff != null)    GLog.i("Your IED is already in use.");
+			else if (charge <= 1)           GLog.i("Your IED hasn't recharged enough to be usable yet.");
+			else if (cursed)                GLog.i("You cannot use a cursed IED.");
 			else GameScene.show(
 						new WndOptions(TXT_HGLASS, TXT_DESC, TXT_STASIS, TXT_FREEZE) {
 							@Override
@@ -148,20 +148,20 @@ public class TimekeepersHourglass extends Artifact {
 	@Override
 	public String desc() {
 		String desc =
-				"This large ornate hourglass looks fairly unassuming, but you feel a great power in its finely carved" +
-				" frame. As you rotate the hourglass and watch the sand pour you can feel its magic tugging at you, " +
-				"surely invoking this magic would give you some power over time.";
+				"Whoa, it's a bomb! Looks kind of primitive though, must be a handmade IED." +
+				"As you rotate the explosive and watch the sand pour you can feel its magic tugging at you, " +
+				"surely invoking this magic would explode time itself.";
 
 		if (isEquipped( Dungeon.hero )){
 			if (!cursed) {
-				desc += "\n\nThe hourglass rests at your side, the whisper of steadily pouring sand is reassuring.";
+				desc += "\n\nThe IED rests at your side, the whisper of steadily pouring sand is reassuring in a weird way.";
 
 				if (level < levelCap )
 					desc +=
-						"\n\nThe hourglass seems to have lost some sand with age. While there are no cracks, " +
-						"there is a port on the top of the hourglass to pour sand in, if only you could find some...";
+						"\n\nThe IED seems to have lost some sand with age. While there are no cracks, " +
+						"there is a port on the top of the explosive to pour sand in, if only you could find some...";
 			}else
-				desc += "\n\nThe cursed hourglass is locked to your side, " +
+				desc += "\n\nThe cursed IED is locked to your side, " +
 						"you can feel it trying to manipulate your flow of time.";
 		}
 		return desc;
@@ -364,20 +364,20 @@ public class TimekeepersHourglass extends Artifact {
 				hourglass.upgrade();
 				Sample.INSTANCE.play( Assets.SND_DEWDROP );
 				if (hourglass.level == hourglass.levelCap)
-					GLog.p("Your hourglass is filled with magical sand!");
+					GLog.p("Your IED is filled with magical sand!");
 				else
-					GLog.i("you add the sand to your hourglass.");
+					GLog.i("you add the sand to your IED.");
 				hero.spendAndNext(TIME_TO_PICK_UP);
 				return true;
 			} else {
-				GLog.w("You have no hourglass to place this sand into.");
+				GLog.w("You have no IED to place this sand into.");
 				return false;
 			}
 		}
 
 		@Override
 		public String desc(){
-			return "This small bag of finely ground sand should work perfectly with your hourglass.\n\n" +
+			return "This small bag of finely ground sand should work perfectly with your IED.\n\n" +
 					"It seems odd that the shopkeeper would have this specific item right when you need it.";
 		}
 
