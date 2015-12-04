@@ -43,6 +43,7 @@ public class ToxicTrap extends Trap{
 
 	@Override
 	public String desc() {
-		return "Triggering this trap will set a cloud of toxic gas loose within the surrounding area.";
+		return "In this dungeon, the showers work perfectly."+
+		return "Just watch your step while you're in them.";
 	}
 }
