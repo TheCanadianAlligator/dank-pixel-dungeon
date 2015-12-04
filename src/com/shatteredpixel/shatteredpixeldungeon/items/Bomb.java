@@ -106,7 +106,7 @@ public class Bomb extends Item {
 	@Override
 	public boolean doPickUp(Hero hero) {
 		if (fuse != null) {
-			GLog.w("You quickly snuff the bomb's fuse.");
+			GLog.w("You quickly put the clock on snooze.");
 			fuse = null;
 		}
 		return super.doPickUp(hero);
@@ -153,7 +153,7 @@ public class Bomb extends Item {
 					}
 
 					if (ch == Dungeon.hero && !ch.isAlive())
-						Dungeon.fail("Killed by an explosion");
+						Dungeon.fail("But I don't wanna go to school");
 				}
 			}
 		}
@@ -197,9 +197,9 @@ public class Bomb extends Item {
 	@Override
 	public String info() {
 		return
-			"A fairly hefty black powder bomb. An explosion from this would certainly do damage to anything nearby." +
-				(fuse != null ? "\n\nThe bomb's fuse is burning away, keep your distance or put it out!" :
-					"\n\nIt looks like the fuse will take a couple rounds to burn down once it is lit.");
+			"A fairly hefty alarm clock. The ringing from this would certainly do damage to anything nearby." +
+				(fuse != null ? "\n\nThe clock's alarm is ticking down, keep your distance or put it on snooze!" :
+					"\n\nIt looks like the alarm will take a couple rounds to tick down once it is lit.");
 	}
 
 	private static final String FUSE = "fuse";
@@ -271,7 +271,7 @@ public class Bomb extends Item {
 		@Override
 		public String info() {
 			return
-				"A stack of two hefty black powder bombs, looks like you get one free!";
+				"A stack of two hefty alarm clocks, looks like you get one free!";
 		}
 
 		@Override
