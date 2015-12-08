@@ -40,8 +40,8 @@ public class PotionOfExperience extends Potion {
 	@Override
 	public String desc() {
 		return
-			"The storied experiences of multitudes of battles reduced to liquid form, " +
-			"this draught will instantly raise your experience level.";
+			"Don't feel like spending hours of hard work to get tougher, focus and dodge? " +
+			"This devious mix of Adderall can fix that for you.";
 	}
 	
 	@Override
