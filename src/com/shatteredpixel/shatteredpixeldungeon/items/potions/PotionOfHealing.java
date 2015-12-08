@@ -60,7 +60,7 @@ public class PotionOfHealing extends Potion {
 	@Override
 	public String desc() {
 		return
-			"An elixir that will instantly return you to full health and cure poison.";
+			"People call this the drink of the gods. That'll actually be true if you manage to get the Amulet.";
 	}
 	
 	@Override
