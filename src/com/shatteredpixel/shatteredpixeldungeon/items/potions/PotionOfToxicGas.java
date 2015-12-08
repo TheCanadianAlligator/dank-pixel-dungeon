@@ -51,7 +51,7 @@ public class PotionOfToxicGas extends Potion {
 	public String desc() {
 		return
 			"Alchemists found that toxic gas in a bottle was a very effective" +
-			"chemical weapons against the enemies of the kingdom." +
+			"chemical weapons against enemies of the kingdom." +
 			"These bottles were quickly retired not because of the war crimes," +
 			"but because soldiers kept confusing them for healing potions.";
 	}
