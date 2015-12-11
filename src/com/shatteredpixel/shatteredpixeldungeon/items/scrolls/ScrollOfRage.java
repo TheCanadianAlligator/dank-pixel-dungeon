@@ -60,7 +60,7 @@ public class ScrollOfRage extends Scroll {
 			}
 		}
 
-		GLog.w( "The scroll emits an enraging roar that echoes throughout the dungeon!" );
+		GLog.w( "The scroll emits an enraging shitpost that echoes throughout the dungeon!" );
 		setKnown();
 		
 		curUser.sprite.centerEmitter().start( Speck.factory( Speck.SCREAM ), 0.3f, 3 );
