@@ -149,17 +149,17 @@ public class TimekeepersHourglass extends Artifact {
 	public String desc() {
 		String desc =
 				"Whoa, it's a bomb! Looks kind of primitive though, must be a handmade IED." +
-				"As you rotate the explosive and watch the sand pour you can feel its magic tugging at you, " +
-				"surely invoking this magic would explode time itself.";
+				"As you shake the explosive and watch the sand shift about you find it harder and harder to see, " +
+				"surely invoking this magic would cause surprise damage to the space-time continuum.";
 
 		if (isEquipped( Dungeon.hero )){
 			if (!cursed) {
-				desc += "\n\nThe IED rests at your side, the whisper of steadily pouring sand is reassuring in a weird way.";
+				desc += "\n\nThe IED rests at your side. Its quiet, steady beeping is reassuring in a weird way.";
 
 				if (level < levelCap )
 					desc +=
-						"\n\nThe IED seems to have lost some sand with age. While there are no cracks, " +
-						"there is a port on the top of the explosive to pour sand in, if only you could find some...";
+						"\n\nSand seems to have fallen off the IED with age. While it's not easily visible, " +
+						"there is a clean spot on the top of the explosive to pour sand on, if only you could find some...";
 			}else
 				desc += "\n\nThe cursed IED is locked to your side, " +
 						"you can feel it trying to manipulate your flow of time.";
@@ -364,20 +364,20 @@ public class TimekeepersHourglass extends Artifact {
 				hourglass.upgrade();
 				Sample.INSTANCE.play( Assets.SND_DEWDROP );
 				if (hourglass.level == hourglass.levelCap)
-					GLog.p("Your IED is filled with magical sand!");
+					GLog.p("Your IED is covered with magical sand!");
 				else
 					GLog.i("you add the sand to your IED.");
 				hero.spendAndNext(TIME_TO_PICK_UP);
 				return true;
 			} else {
-				GLog.w("You have no IED to place this sand into.");
+				GLog.w("You have no IED to place this sand onto.");
 				return false;
 			}
 		}
 
 		@Override
 		public String desc(){
-			return "This small bag of finely ground sand should work perfectly with your IED.\n\n" +
+			return "This small bag of finely ground sand should camouflage your IED perfectly.\n\n" +
 					"It seems odd that the shopkeeper would have this specific item right when you need it.";
 		}
 
