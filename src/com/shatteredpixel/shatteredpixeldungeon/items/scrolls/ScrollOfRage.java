@@ -74,6 +74,6 @@ public class ScrollOfRage extends Scroll {
 	public String desc() {
 		return
 			"Nothing enrages Regrowth spammers like a shitpost about their precious wand. " +
-			"Fortunately for you, there's a reason the monsters don't eat rations";
+			"Fortunately for you, there's a reason the monsters don't eat rations.";
 	}
 }
